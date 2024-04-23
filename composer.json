@@ -1,0 +1,15 @@
+{
+    "name": "gaming/tonti-laguna-prime",
+    "autoload": {
+        "psr-4": {
+            "TontiLagunaPrime\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Slava Mora",
+            "email": "gitmooncat@gmail.com"
+        }
+    ],
+    "require": {}
+}
