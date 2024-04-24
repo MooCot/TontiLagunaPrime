@@ -4,18 +4,23 @@ namespace TontiLagunaPrime;
 
 class File {
     public static function test(string $stringToWrite) {
-
-        // Путь к файлу, в который нужно записать строку
         $filePath = "example.txt";
 
-        // Записываем строку в файл
-        file_put_contents($filePath, $stringToWrite);
+        // Проверяем существование файла
+        if (!file_exists($filePath)) {
+            // Если файл не существует, создаем его
+            touch($filePath);
+        }
+
+        // Дописываем строку в файл, используя параметр FILE_APPEND
+        file_put_contents($filePath, $stringToWrite . "\n", FILE_APPEND);
 
         // Проверяем успешность операции записи
         if (file_exists($filePath)) {
-            echo "Строка успешно записана в файл.";
+            return true;
         } else {
-            echo "Ошибка при записи строки в файл.";
+            return false;
         }
     }
+
 }

@@ -3,11 +3,11 @@
 namespace TontiLagunaPrime;
 
 class Client {
-    public static function test() {
+    public static function send($url, $params) {
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt_array($curl, array(
-            CURLOPT_URL => 'https://www.boredapi.com/api/activity?participants=5&type=social',
+            CURLOPT_URL => $url. http_build_query($params),
             CURLOPT_RETURNTRANSFER => true, // Возвращаем результат в виде строки
             CURLOPT_FOLLOWLOCATION => true, // Следовать редиректам
             CURLOPT_HTTPGET => true, // Выполнить GET-запрос
