@@ -33,7 +33,7 @@ class Resource {
 
     public function getSender(): string
     {
-        return $this->activity;
+        return $this->sender;
     }
 
     public function setSender(string $sender)
@@ -43,11 +43,11 @@ class Resource {
         $this->sender = $sender;
     }
 
-    public function toArray(): array
+    public function toArray()
     {
         return [
             'participants' => $this->participants,
-            'type' => $this->activity,
+            'type' => $this->activity
         ];
     }
 }

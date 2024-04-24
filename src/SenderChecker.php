@@ -2,7 +2,8 @@
 
 namespace TontiLagunaPrime;
 
-class SenderChecker {
+class SenderChecker
+{
     private $allowedSenders = ["file", "console"];
 
     public function isAllowedSender($sender) {

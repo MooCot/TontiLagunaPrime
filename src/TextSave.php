@@ -2,8 +2,10 @@
 
 namespace TontiLagunaPrime;
 
-class File {
-    public static function test(string $stringToWrite) {
+class TextSave implements Saver
+{
+    public function save(string $stringToWrite)
+    {
         $filePath = "example.txt";
 
         // Проверяем существование файла
@@ -22,5 +24,4 @@ class File {
             return false;
         }
     }
-
 }
