@@ -7,5 +7,5 @@ interface Reader {
     public function getInputActivity();
     public function getInputSender();
 
-    public function toResource();
+    public function getResource();
 }

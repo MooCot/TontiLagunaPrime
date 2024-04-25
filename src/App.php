@@ -7,12 +7,10 @@ use TontiLagunaPrime\Client;
 class App
 {
     private Reader $reader;
-    private Saver $saver;
 
-    public function __construct(Reader $reader, Saver $saver)
+    public function __construct(Reader $reader)
     {
         $this->reader = $reader;
-        $this->saver = $saver;
     }
 
     public function process()
@@ -20,14 +18,19 @@ class App
         $this->reader->getInputParticipants();
         $this->reader->getInputActivity();
         $this->reader->getInputSender();
-        $resurse = $this->reader->toResource();
-        $ansver = Client::send('https://www.boredapi.com/api/activity?', $resurse->toArray());
-        $sender = $resurse->getSender();
+        $resource = $this->reader->getResource();
+        $ansver = Client::send('https://www.boredapi.com/api/activity?', $resource->toArray());
+
+        $messageSender = $this->createMessageSender($resource->getSender());
+        $messageSender->send($ansver);
+    }
+
+    private function createMessageSender($sender)
+    {
         if ($sender === 'file') {
-            $this->saver->save($ansver);
-        }
-        else {
-            echo $sender;
+            return new MessageSender(new FileMessageSender());
+        } else {
+            return new MessageSender(new ConsoleMessageSender());
         }
     }
 }

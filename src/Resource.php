@@ -2,7 +2,8 @@
 
 namespace TontiLagunaPrime;
 
-class Resource {
+class Resource
+{
     private int $participants;
     private string $activity;
     private string $sender;

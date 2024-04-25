@@ -13,7 +13,7 @@ use TontiLagunaPrime\App;
 use TontiLagunaPrime\ConsoleReader;
 use TontiLagunaPrime\TextSave;
 
-$app = new App(new ConsoleReader(new Resource()), new TextSave());
+$app = new App(new ConsoleReader());
 $app->process();
 
 // print_r($ansver);

@@ -63,7 +63,7 @@ class ConsoleReader implements Reader
         }
     }
 
-    public function toResource(): Resource
+    public function getResource(): Resource
     {
         return $this->resource;
     }
