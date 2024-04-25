@@ -17,7 +17,7 @@ class Resource
         return $this->participants;
     }
 
-    public function setParticipants(int $participants)
+    public function setParticipants($participants)
     {
         $participantChecker = new ParticipantChecker();
         $participantChecker->isParticipant($participants);
@@ -29,7 +29,7 @@ class Resource
         return $this->activity;
     }
 
-    public function setActivity(string $activity)
+    public function setActivity($activity)
     {
         $activityChecker = new ActivityChecker();
         $activityChecker->isAllowedActivity($activity);
@@ -41,7 +41,7 @@ class Resource
         return $this->sender;
     }
 
-    public function setSender(string $sender)
+    public function setSender($sender)
     {
         $senderChecker = new SenderChecker();
         $senderChecker->isAllowedSender($sender);

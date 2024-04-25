@@ -24,11 +24,11 @@ class ConsoleReader implements Reader
             $participants = fgets(STDIN);
             try {
                 $this->resource->setParticipants($participants);
-                echo "Учасники, $participants !";
+                echo "Кількість, $participants !";
                 break;
             } catch (InvalidParticipandException $e) {
-                echo "Ошибка: " . $e->getMessage() . "\n";
-                echo "Пожалуйста, введите количество учасниики еще раз: ";
+                echo "Error: " . $e->getMessage() . "\n";
+                echo "Ще раз: ";
             }
         }
     }
@@ -39,11 +39,11 @@ class ConsoleReader implements Reader
             $activity = trim(fgets(STDIN));
             try {
                 $this->resource->setActivity($activity);
-                echo "Привет, $activity !";
+                echo "Тип, $activity";
                 break;
             } catch (InvalidActivityException $e) {
-                echo "Ошибка: " . $e->getMessage() . "\n";
-                echo "Пожалуйста, введите количество activity еще раз: ";
+                echo "Error: " . $e->getMessage() . "\n";
+                echo "Ще раз: ";
             }
         }
     }
@@ -54,11 +54,11 @@ class ConsoleReader implements Reader
             $sender = trim(fgets(STDIN));
             try {
                 $this->resource->setSender($sender);
-                echo "Привет, $sender !";
+                echo "Спосіб, $sender !";
                 break;
             } catch (InvalidSenderException $e) {
-                echo "Ошибка: " . $e->getMessage() . "\n";
-                echo "Пожалуйста, введите количество sender еще раз: ";
+                echo "Error: " . $e->getMessage() . "\n";
+                echo "Ще раз: ";
             }
         }
     }
