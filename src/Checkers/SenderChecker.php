@@ -1,6 +1,8 @@
 <?php
 
-namespace TontiLagunaPrime;
+namespace TontiLagunaPrime\Checkers;
+
+use TontiLagunaPrime\Exception\InvalidSenderException;
 
 class SenderChecker
 {

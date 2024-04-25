@@ -1,11 +1,11 @@
 <?php
 
-namespace TontiLagunaPrime;
+namespace TontiLagunaPrime\Reader;
 
 use TontiLagunaPrime\Resource;
-use TontiLagunaPrime\InvalidParticipandException;
-use TontiLagunaPrime\InvalidActivityException;
-use TontiLagunaPrime\InvalidSenderException;
+use TontiLagunaPrime\Exception\InvalidParticipandException;
+use TontiLagunaPrime\Exception\InvalidActivityException;
+use TontiLagunaPrime\Exception\InvalidSenderException;
 
 class ConsoleReader implements Reader
 {

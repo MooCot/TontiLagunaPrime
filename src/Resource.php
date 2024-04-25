@@ -2,6 +2,10 @@
 
 namespace TontiLagunaPrime;
 
+use TontiLagunaPrime\Checkers\ActivityChecker;
+use TontiLagunaPrime\Checkers\ParticipantChecker;
+use TontiLagunaPrime\Checkers\SenderChecker;
+
 class Resource
 {
     private int $participants;

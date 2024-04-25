@@ -1,8 +1,9 @@
 <?php
 
-namespace TontiLagunaPrime;
+namespace TontiLagunaPrime\Reader;
 
-interface Reader {
+interface Reader
+{
     public function getInputParticipants();
     public function getInputActivity();
     public function getInputSender();

@@ -2,18 +2,9 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-use TontiLagunaPrime\Client;
-use TontiLagunaPrime\File;
-use TontiLagunaPrime\Resource;
-use TontiLagunaPrime\InvalidParticipandException;
-use TontiLagunaPrime\InvalidActivityException;
-use TontiLagunaPrime\InvalidSenderException;
-use TontiLagunaPrime\ActivityChecker;
 use TontiLagunaPrime\App;
-use TontiLagunaPrime\ConsoleReader;
-use TontiLagunaPrime\TextSave;
+use TontiLagunaPrime\Reader\ConsoleReader;
+use TontiLagunaPrime\Resource;
 
-$app = new App(new ConsoleReader());
+$app = new App(new ConsoleReader(new Resource()));
 $app->process();
-
-// print_r($ansver);

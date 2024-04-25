@@ -1,5 +1,5 @@
 <?php
-namespace TontiLagunaPrime;
+namespace TontiLagunaPrime\Sender;
 
 interface MessageSenderInterface
 {

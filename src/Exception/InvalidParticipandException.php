@@ -1,9 +1,10 @@
 <?php
-namespace TontiLagunaPrime;
+namespace TontiLagunaPrime\Exception;
 
 class InvalidParticipandException extends \Exception
 {
-    public function errorMessage() {
+    public function errorMessage()
+    {
         return "Ошибка: Неверное значение!.";
     }
 }

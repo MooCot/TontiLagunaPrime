@@ -1,9 +1,10 @@
 <?php
-namespace TontiLagunaPrime;
+namespace TontiLagunaPrime\Exception;
 
 class InvalidActivityException extends \Exception
 {
-    public function errorMessage() {
+    public function errorMessage()
+    {
         return "Активность недопустима.";
     }
 }

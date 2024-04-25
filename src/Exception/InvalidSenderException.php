@@ -1,9 +1,10 @@
 <?php
-namespace TontiLagunaPrime;
+namespace TontiLagunaPrime\Exception;
 
 class InvalidSenderException extends \Exception
 {
-    public function errorMessage() {
+    public function errorMessage()
+    {
         return "Вывод недопустим.";
     }
 }

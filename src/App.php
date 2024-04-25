@@ -3,6 +3,10 @@
 namespace TontiLagunaPrime;
 
 use TontiLagunaPrime\Client;
+use TontiLagunaPrime\Reader\Reader;
+use TontiLagunaPrime\Sender\ConsoleMessageSender;
+use TontiLagunaPrime\Sender\FileMessageSender;
+use TontiLagunaPrime\Sender\MessageSender;
 
 class App
 {

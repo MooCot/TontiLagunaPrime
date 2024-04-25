@@ -1,6 +1,8 @@
 <?php
 
-namespace TontiLagunaPrime;
+namespace TontiLagunaPrime\Checkers;
+
+use TontiLagunaPrime\Exception\InvalidActivityException;
 
 class ActivityChecker {
     private $allowedActivities = ["education", "recreational", "social", "diy", "charity", "cooking", "relaxation", "music", "busywork"];

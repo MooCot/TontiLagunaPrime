@@ -1,6 +1,6 @@
 <?php
 
-namespace TontiLagunaPrime;
+namespace TontiLagunaPrime\Sender;
 
 class FileMessageSender implements MessageSenderInterface
 {
